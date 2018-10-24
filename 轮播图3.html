@@ -86,10 +86,13 @@
         <script type="text/javascript">
                 var imgarr = ["img/banner1.jpg", "img/banner2.jpg", "img/banner3.jpg"];
                 var $box = document.getElementById("box");
+                var $left = 0;
                 for (var i in imgarr){
                         var $img = document.createElement("img");
                         $img.src = imgarr[i];
-                        $img.value = i;
+                        // 动态插入图片的时候，不能把图片叠在一起，要横向分开显示，动画看起来才会比较自然
+                        $img.style.left = $left + "px";
+                        $left += 960;
                         $box.appendChild($img);
                 }
                 var num = 0;
