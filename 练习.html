@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>练习</title>
+        <script type="text/javascript" src="js/jquery.min.js" charset="utf-8"></script>
+        <style type="text/css">
+                *{
+                        margin: 0;
+                        padding: 0;
+                }
+                #box{
+                        width: 500px;
+                        height: 400px;
+                        background: whitesmoke;
+                        margin: 0 auto;
+                        padding-left: 10px;
+                        padding-top: 10px;
+                }
+                .typea{
+                        text-decoration: none;
+                        color: gray;
+                        display: inline-block;
+                        margin: 8px;
+                        padding: 8px;
+                        background: white;
+                        border-radius: 10px;
+                        float: left;
+                }
+                .change{
+                        background: orange;
+                        color: white;
+                }
+        </style>
+</head>
+<body>
+        <div id="box"></div>
+
+        <script type="text/javascript">
+                $(document).ready(function () {
+                        var arr = ["首页", "精品限免","效率", "旅行", "社交", "游戏", "影音", "财务", "工具", "资讯", "购物", "健康", "美食", "笔记", "生活", "学习", "图像", "专题", "应用动态", "参考", "美化", "最美出品"];
+        
+                        var $box = $("#box");
+                        
+                        for (var i in arr){
+                                var $a = document.createElement("a");
+                                $a.href = "#";
+                                $a.innerHTML = arr[i];
+                                $a.className = "typea";
+                                $a.onclick = function () {
+                                       $(this).addClass("change");
+                                       $(this).siblings().removeClass("change");
+                                }
+                                $box.append($a);
+                        }
+                });
+        </script>
+</body>
+</html>

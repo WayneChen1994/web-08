@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>JQuery选择器</title>
+        <script type="text/javascript" src="js/jquery.min.js" charset="utf-8"></script>
+</head>
+<body>
+
+        常用选择器：
+        1、id选择器
+        $('#id选择器名')
+        例如：$("#box")
+        
+        2、标签选择器
+        $('标签名')
+        例如：$("div")
+        
+        3、class选择器
+        $('.class名')
+        例如：$(".box")
+        
+        4、群组选择器
+        $('选择器1,选择器2,……,选择器n')
+        例如：$(".box,div,p")
+        
+        5、通配符选择器
+        $('*')
+        
+        6、包含选择器
+        $('父选择器 子选择器')
+        
+        7、父子选择器
+        $('父选择器>子选择器')
+        
+        8、兄弟选择器
+        $(选择器).next()
+        功能：选中指定元素的下一个兄弟元素
+        $(选择器).prev()
+        功能：选中指定元素的上一个兄弟元素
+        $(选择器).sibings()
+        功能：选中除自己外的所有兄弟元素
+
+-----------------------------------------------------------------
+        
+        $().css(样式对象)
+        功能：添加样式，参数是对象{'属性名1': '属性值1', '属性名2': '属性值2', ……}
+        属性与属性之间使用“,”隔开，属性与属性值使用“:”连接。
+        属性名与属性值与css中的相同。
+        
+        添加点击事件
+        $().on('click', function(){})
+
+        <ul id="nav">
+                <li><a href="#">互联网</a></li>
+                <li class="first"><a href="#">首页</a></li>
+                <li><a href="#">科技</a></li>
+                <li><a href="#">新闻</a>
+                        <ul>
+                                <li>娱乐新闻</li>
+                                <li>体育新闻</li>
+                                <li>花边新闻</li>
+                        </ul>
+                </li>
+        </ul>
+
+        <script type="text/javascript">
+                $("*").css({
+                        "margin": "0",
+                        "padding": "0"
+                })
+                
+                $("ul,li").css({
+                        "list-style": "none"
+                });
+                
+                $("ul").css({
+                        "background":"red",
+                        "height": "50px"});
+                
+                $("#nav>li").css({
+                        "width": "100px",
+                        "float": "left",
+                        "background": "blue"
+                });
+                
+                $(".first").css({
+                        "background": "yellow"
+                });
+                
+                $(".first").next().css({
+                        "background": "pink"
+                });
+                
+                $(".first").prev().css({
+                        "background": "green"
+                });
+                
+                $(".first").siblings().css({
+                        "background": "#fff"
+                });
+                
+                $("li").on("click", function () {
+                        alert("我被点击了");
+                })
+        </script>
+</body>
+</html>

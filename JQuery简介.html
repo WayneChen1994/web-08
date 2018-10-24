@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>JQuery简介</title>
+        <script type="text/javascript" src="js/jquery.min.js" charset="utf-8"></script>
+        <style type="text/css">
+                .bg{
+                        width: 200px;
+                        height: 200px;
+                        background: yellow;
+                }
+                .bg2{
+                        border-radius: 50%;
+                }
+        </style>
+</head>
+<body>
+        注意，当存在多个js文件的时候，我们应该把库文件先链接，然后再链接自己创建的文件。
+-----------------------------------------------------------------
+        JQuery的基本语法：
+        $(选择器).函数名(参数列表)
+        $：代表使用JQuery库
+        选择器：css选择器，JQuery自己独有的选择器
+        函数调用：对象.函数名(参数列表)
+        
+        使用$获取的对象与使用document直接获取的对象能使用的函数并不相同，因此不要将两者之间的函数混淆。
+-------------------------------------------------------------------
+        简单的函数的使用：
+        // 添加类属性
+        $(选择器).addClass(className)
+        // 去除类属性
+        $(选择器).removeClass(className)
+        
+        $(选择器).html()
+        // 类似于js中的innerHTML
+        
+        <div id="box"></div>
+        <script type="text/javascript">
+                $("#box").addClass("bg");
+                $("#box").addClass("bg2");
+                
+                $("#box").html('<h1>hello</h1>');
+                
+                
+                $("#box").on("click", function () {
+                        $("#box").removeClass("bg");
+                })
+                
+                
+                // window.onload = function () {
+                //
+                // }
+                
+                // 整个页面加载完毕之后执行，一般情况下作为程序的入口
+                $(document).ready(function () {
+                        console.log("hello");
+                });
+
+                var $box = document.getElementById("box");
+                console.log($box);
+                var box_ = $("#box");
+                var boxs = $("div");
+                console.log(box_);
+                console.log(boxs);
+        </script>
+</body>
+</html>

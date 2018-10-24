@@ -1,0 +1,138 @@
+.content{
+        width: 100%;
+        background: #aaa;
+        padding-top: 10px;
+        overflow: hidden;
+}
+
+.contenter{
+        width: 960px;
+        margin: 0 auto;
+}
+
+.content .con-left{
+        width: 650px;
+        float: left;
+}
+
+.content .con-right{
+        width: 300px;
+        float: right;
+        height: 400px;
+        background: white;
+}
+
+#imgbox li{
+        margin-bottom: 10px;
+}
+
+#imgbox li .box{
+        width: 590px;
+        height: 600px;
+        padding: 25px 30px;
+        position: relative;
+        background: white;
+}
+
+#imgbox .icon{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 30px;
+        top: 30px;
+}
+
+#imgbox h3{
+        position: absolute;
+        left: 100px;
+        top: 25px;
+        font-size: 16px;
+}
+
+#imgbox h3 span{
+        font-size: 20px;
+}
+
+.img-top .btu{
+        position: absolute;
+        left: 100px;
+        top: 55px;
+        background: url("../img/icons/love.png") no-repeat left center;
+        padding-left: 25px;
+        background-size: 20px 20px;
+}
+
+.img-top .time{
+        position: absolute;
+        right: 35px;
+        top: 35px;
+}
+
+#imgbox .image{
+        position: absolute;
+        left: 30px;
+        top: 100px;
+        width: 590px;
+}
+
+#imgbox .froms{
+        width: 590px;
+        position: absolute;
+        left: 30px;
+        bottom: 25px;
+}
+
+.froms .t1{
+        font-size: 14px;
+        color: gray;
+        margin-bottom: 20px;
+}
+
+.froms .t1 span{
+        font-size: 18px;
+        margin-right: 20px;
+        color: black;
+}
+
+.froms .yhl{
+        float: left;
+        width: 16px;
+        height: 16px;
+}
+
+.froms .yhr{
+        float: right;
+        width: 16px;
+        height: 16px;
+}
+
+.froms .con{
+        font-size: 14px;
+        color: gray;
+        line-height: 28px;
+        margin: 0 20px;
+}
+
+#type-box{
+        width: 300px;
+        height: 230px;
+        background: whitesmoke;
+        margin: 0 auto;
+        padding-top: 5px;
+}
+
+.typea{
+        display: inline-block;
+        font-size: 12px;
+        padding: 5px 8px;
+        background: white;
+        border-radius: 3px;
+        margin: 5px;
+        text-decoration: none;
+        color: gray;
+}
+
+.change{
+        background: orange;
+        color: white;
+}
