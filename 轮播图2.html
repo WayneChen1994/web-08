@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>轮播图2</title>
+        <style type="text/css">
+                #box{
+                        width: 960px;
+                        height: 300px;
+                        background: url("img/banner1.jpg") no-repeat center center;
+                        background-size: 100% 100%;
+                        /*animation: bg 6s infinite;*/
+                }
+                /*@keyframes bg {*/
+                        /*0%{*/
+                                /*background-image: url("img/banner1.jpg");*/
+                        /*}*/
+                        /*33%{*/
+                                /*background-image: url("img/banner2.jpg");*/
+                        /*}*/
+                        /*66%{*/
+                                /*background-image: url("img/banner3.jpg");*/
+                        /*}*/
+                /*}*/
+        </style>
+</head>
+<body>
+        <div id="box">
+        
+        </div>
+
+        <script type="text/javascript">
+                var imgarr = ["img/banner1.jpg", "img/banner2.jpg", "img/banner3.jpg"];
+                var $box = document.getElementById("box");
+                var num = 0;
+                setInterval(function () {
+                        $box.style.backgroundImage = 'url(' + imgarr[num++%3] + ')';
+                },1000);
+        </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>轮播图3</title>
+        <style type="text/css">
+                .bigbox{
+                        width: 960px;
+                        height: 300px;
+                        position: relative;
+                }
+                #box{
+                        width: 960px;
+                        height: 300px;
+                        margin: 50px auto;
+                        position: relative;
+                        overflow: hidden;
+                }
+                #box img{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                }
+                .yichu{
+                        animation: toleft 2s 1;
+                        /* 保持运动结束之后的状态 */
+                        animation-fill-mode: both;
+                }
+                /*@keyframes toleft {*/
+                        /*0%{*/
+                                /*transform: translateX(0);*/
+                        /*}*/
+                        /*100%{*/
+                                /*transform: translateX(-100%);*/
+                        /*}*/
+                /*}*/
+                @keyframes toleft {
+                        0%{
+                                left: 0;
+                        }
+                        100%{
+                                left: -100%;
+                        }
+                }
+                .yiru{
+                        animation: toleft2 2s 1;
+                        animation-fill-mode: both;
+                }
+                /*@keyframes toleft2 {*/
+                        /*0%{*/
+                                /*transform: translateX(-100%);*/
+                        /*}*/
+                        /*100%{*/
+                                /*transform: translateX(0);*/
+                        /*}*/
+                /*}*/
+                @keyframes toleft2 {
+                        0%{
+                                left: 100%;
+                        }
+                        100%{
+                                left: 0;
+                        }
+                }
+                .pp{
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 40px;
+                        background: rgba(50,50,50,0.7);
+                        color: white;
+                        /* 设置层叠方式，取值越大，显示越上层 */
+                        z-index: 9;
+                }
+        </style>
+</head>
+<body>
+        <div class="bigbox">
+                <div id="box"></div>
+                <p class="pp">
+                        家有6套房！杭州一拆迁户坚持开夜班公交?
+                </p>
+        </div>
+        <script type="text/javascript">
+                var imgarr = ["img/banner1.jpg", "img/banner2.jpg", "img/banner3.jpg"];
+                var $box = document.getElementById("box");
+                for (var i in imgarr){
+                        var $img = document.createElement("img");
+                        $img.src = imgarr[i];
+                        $img.value = i;
+                        $box.appendChild($img);
+                }
+                var num = 0;
+                setInterval(function () {
+                        var $img = $box.children[num%3];
+                        $img.className = 'yichu';
+                        var $img2 = $box.children[++num%3];
+                        $img.style.left = "960px";
+                        $img2.className = 'yiru';
+                },2000);
+        </script>
+</body>
+</html>

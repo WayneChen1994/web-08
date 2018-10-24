@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>节点</title>
+</head>
+<body>
+        <ul id="nav">
+                <li id="first-li">
+                        <a href="#">hello</a>
+                </li>
+                <li>
+                        <a href="#">hello</a>
+                </li>
+                <li>
+                        <a href="#">hello</a>
+                </li>
+                <li>
+                        <a href="#">hello</a>
+                </li>
+        </ul>
+
+        <script type="text/javascript">
+                var $li = document.getElementById("first-li");
+                // 获取所有的子节点 【元素/标签，属性，文本】
+                console.log($li.childNodes);
+                // 获取子元素
+                console.log($li.children);
+                console.log($li.firstChild);
+                console.log($li.lastChild);
+                // 获取下一个兄弟标签
+                console.log($li.nextElementSibling);
+                // 获取父标签
+                console.log($li.parentElement);
+        </script>
+</body>
+</html>
